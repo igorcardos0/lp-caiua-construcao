@@ -24,28 +24,30 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen">
       <header className="border-b border-border bg-background/95 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+        <div className="container mx-auto px-4 py-3 md:py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2 md:gap-3 ml-0 md:ml-6 lg:ml-24">
             <Image 
               src="/images/image.png" 
               alt="Caiuá Construções" 
               width={80} 
               height={80} 
-              className="w-16 h-16 rounded-lg shadow-sm" 
+              className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-lg shadow-sm" 
             />
             <div className="hidden sm:block">
-              <h1 className="text-lg font-bold text-primary">Caiuá Construções</h1>
+              <h1 className="text-base md:text-lg font-bold text-primary">Caiuá Construções</h1>
               <p className="text-xs text-muted-foreground">Cerâmica, Construção e Acabamentos</p>
             </div>
           </div>
-          <div className="flex items-center gap-4">
-            <span className="hidden md:block text-sm font-medium text-foreground">(93) 99125-0229</span>
+          <div className="flex items-center gap-2 md:gap-4 mr-0 md:mr-6 lg:mr-24">
+            <span className="hidden lg:block text-sm font-medium text-foreground">(93) 99125-0229</span>
             <Button
               onClick={scrollToContact}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200 shadow-md hover:shadow-lg"
+              size="sm"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground transition-all duration-200 shadow-md hover:shadow-lg text-xs md:text-sm px-3 md:px-4"
             >
-              <Phone className="w-4 h-4 mr-2" />
-              Contato
+              <Phone className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
+              <span className="hidden sm:inline">Contato</span>
+              <span className="sm:hidden">Contato</span>
             </Button>
           </div>
         </div>
@@ -69,14 +71,14 @@ export default function LandingPage() {
 
         <div className="container mx-auto px-4 md:px-12 lg:px-16 xl:px-20 relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-primary/90 text-primary-foreground rounded text-sm font-semibold uppercase tracking-wide animate-fade-in shadow-lg">
-              <MapPin className="w-4 h-4" />
+            <div className="inline-flex items-center gap-2 mb-4 sm:mb-6 px-3 sm:px-4 py-2 bg-primary/90 text-primary-foreground rounded text-xs sm:text-sm font-semibold uppercase tracking-wide animate-fade-in shadow-lg">
+              <MapPin className="w-3 h-3 sm:w-4 sm:h-4" />
               Rurópolis, PA
             </div>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white text-balance leading-[1.1] animate-fade-in-up" style={{ animationDelay: "0.2s", opacity: 0 }}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-white text-balance leading-[1.1] animate-fade-in-up" style={{ animationDelay: "0.2s", opacity: 0 }}>
               A sua casa pronta, <span className="text-primary drop-shadow-lg">do zero ao interior</span>
             </h2>
-            <p className="text-xl md:text-2xl text-white/90 mb-10 text-pretty leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.4s", opacity: 0 }}>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 mb-8 md:mb-10 text-pretty leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.4s", opacity: 0 }}>
               Sem precisar lidar com 10 fornecedores diferentes. Centralize sua obra na Caiuá Construções: a autoridade
               técnica que Rurópolis confia para entregar qualidade, economia e o melhor design para o seu lar.
             </p>
@@ -113,8 +115,8 @@ export default function LandingPage() {
               </div>
             </ScrollAnimation>
             <ScrollAnimation direction="up" delay={200}>
-              <div className="bg-muted/50 border-2 border-primary/10 rounded-lg p-8 md:p-12 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <p className="text-xl text-center text-muted-foreground leading-relaxed">
+              <div className="bg-muted/50 border-2 border-primary/10 rounded-lg p-6 sm:p-8 md:p-12 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <p className="text-base sm:text-lg md:text-xl text-center text-muted-foreground leading-relaxed">
                   Sabemos que o medo de todo proprietário é a obra paralisada por falta de um item pequeno ou erro de
                   cálculo. Nosso atendimento consultivo garante que você compre o pacote completo, evitando múltiplas
                   viagens e gastos extras com fretes indesejados.{" "}
@@ -139,7 +141,7 @@ export default function LandingPage() {
             </ScrollAnimation>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <ScrollAnimation direction="right" delay={100}>
-                <div className="relative h-96 bg-muted rounded-2xl overflow-hidden shadow-xl group">
+                <div className="relative h-64 sm:h-80 md:h-96 bg-muted rounded-2xl overflow-hidden shadow-xl group">
                   <img
                     src="/modern-construction-materials-showroom-with-tiles-.jpg"
                     alt="Loja Caiuá Construções"
@@ -150,12 +152,12 @@ export default function LandingPage() {
               </ScrollAnimation>
               <ScrollAnimation direction="left" delay={200}>
               <div>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4 md:mb-6">
                   A Caiuá Construções representa o porto seguro de quem deseja edificar um patrimônio com inteligência e
                   solidez. Consolidada como uma empresa familiar que honra o investimento de cada cliente, transformamos
                   a simples venda de materiais em uma consultoria completa para sua obra.
                 </p>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4 md:mb-6">
                   Nossa trajetória é marcada pela entrega de soluções que abrangem desde a infraestrutura bruta até o
                   refinamento do design de interiores.
                 </p>
@@ -186,20 +188,20 @@ export default function LandingPage() {
               <div className="text-center mb-16">
                 <h3 className="text-3xl md:text-5xl font-bold mb-4">Por Que Escolher a Caiuá Construções?</h3>
                 <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
                   Diferenciais que garantem o sucesso da sua construção
                 </p>
               </div>
             </ScrollAnimation>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               <ScrollAnimation direction="up" delay={0}>
                 <Card className="border-2 hover:border-primary hover:shadow-lg transition-all duration-300 group cursor-pointer hover:scale-105 hover:-translate-y-1">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-14 h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
-                      <Building2 className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
+                  <CardContent className="p-4 sm:p-6 text-center">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-3 sm:mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
+                      <Building2 className="w-6 h-6 sm:w-7 sm:h-7 text-primary group-hover:text-white transition-colors" />
                     </div>
-                    <h4 className="text-xl font-bold mb-3">Do Bruto ao Acabamento Fino</h4>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Do Bruto ao Acabamento Fino</h4>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       Monte sua obra toda do zero conosco. Oferecemos desde cimento e ferragens até itens de alta margem e
                       design, como iluminação, pisos, revestimentos e kits de banheiro.
                     </p>
@@ -209,12 +211,12 @@ export default function LandingPage() {
 
               <ScrollAnimation direction="up" delay={100}>
                 <Card className="border-2 hover:border-primary hover:shadow-lg transition-all duration-300 group cursor-pointer hover:scale-105 hover:-translate-y-1">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-14 h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
-                      <CheckCircle2 className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
+                  <CardContent className="p-4 sm:p-6 text-center">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-3 sm:mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
+                      <CheckCircle2 className="w-6 h-6 sm:w-7 sm:h-7 text-primary group-hover:text-white transition-colors" />
                     </div>
-                    <h4 className="text-xl font-bold mb-3">Orçamento Ágil e Consultivo</h4>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Orçamento Ágil e Consultivo</h4>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       Não apenas informamos preços; nosso time técnico sugere produtos complementares para evitar
                       retrabalho e garantir que nada falte na sua obra.
                     </p>
@@ -224,12 +226,12 @@ export default function LandingPage() {
 
               <ScrollAnimation direction="up" delay={200}>
                 <Card className="border-2 hover:border-primary hover:shadow-lg transition-all duration-300 group cursor-pointer hover:scale-105 hover:-translate-y-1">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-14 h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
-                      <Sparkles className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
+                  <CardContent className="p-4 sm:p-6 text-center">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-3 sm:mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
+                      <Sparkles className="w-6 h-6 sm:w-7 sm:h-7 text-primary group-hover:text-white transition-colors" />
                     </div>
-                    <h4 className="text-xl font-bold mb-3">Variedade que Rurópolis Merece</h4>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Variedade que Rurópolis Merece</h4>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       Trazemos modelos e produtos exclusivos que você não encontra em outros fornecedores locais,
                       garantindo a estética e qualidade do seu sonho.
                     </p>
@@ -239,12 +241,12 @@ export default function LandingPage() {
 
               <ScrollAnimation direction="up" delay={300}>
                 <Card className="border-2 hover:border-primary hover:shadow-lg transition-all duration-300 group cursor-pointer hover:scale-105 hover:-translate-y-1">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-14 h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
-                      <TruckIcon className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
+                  <CardContent className="p-4 sm:p-6 text-center">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-3 sm:mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
+                      <TruckIcon className="w-6 h-6 sm:w-7 sm:h-7 text-primary group-hover:text-white transition-colors" />
                     </div>
-                    <h4 className="text-xl font-bold mb-3">Entrega Local Especializada</h4>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Entrega Local Especializada</h4>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       Logística focada em Rurópolis e cidades vizinhas (raio de até 90km), com o cuidado e a pontualidade
                       que sua construção exige.
                     </p>
@@ -254,12 +256,12 @@ export default function LandingPage() {
 
               <ScrollAnimation direction="up" delay={400}>
                 <Card className="border-2 hover:border-primary hover:shadow-lg transition-all duration-300 group cursor-pointer hover:scale-105 hover:-translate-y-1">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-14 h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
-                      <Package className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
+                  <CardContent className="p-4 sm:p-6 text-center">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-3 sm:mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
+                      <Package className="w-6 h-6 sm:w-7 sm:h-7 text-primary group-hover:text-white transition-colors" />
                     </div>
-                    <h4 className="text-xl font-bold mb-3">A Segurança de Quem Constrói ao Seu Lado</h4>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">A Segurança de Quem Constrói ao Seu Lado</h4>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       Investir em uma obra é realizar um sonho, e nós levamos isso a sério. Como uma empresa familiar
                       consolidada, tratamos o seu projeto como se fosse nosso.
                     </p>
@@ -269,12 +271,12 @@ export default function LandingPage() {
 
               <ScrollAnimation direction="up" delay={500}>
                 <Card className="border-2 hover:border-primary hover:shadow-lg transition-all duration-300 group cursor-pointer hover:scale-105 hover:-translate-y-1">
-                  <CardContent className="p-6 text-center">
-                    <div className="w-14 h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
-                      <Lightbulb className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
+                  <CardContent className="p-4 sm:p-6 text-center">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-3 sm:mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
+                      <Lightbulb className="w-6 h-6 sm:w-7 sm:h-7 text-primary group-hover:text-white transition-colors" />
                     </div>
-                    <h4 className="text-xl font-bold mb-3">Consultoria Técnica de Autoridade</h4>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Consultoria Técnica de Autoridade</h4>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                       Mais do que vender materiais, oferecemos uma consultoria técnica de autoridade para garantir que seu
                       investimento seja inteligente e sem desperdícios.
                     </p>
@@ -301,10 +303,10 @@ export default function LandingPage() {
         <div className="container mx-auto px-4 relative z-10">
           <ScrollAnimation direction="up" delay={0}>
             <div className="max-w-3xl mx-auto text-center">
-              <h3 className="text-3xl md:text-5xl font-bold mb-6 text-balance">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-balance px-4">
                 Construir não precisa ser sinônimo de dor de cabeça
               </h3>
-              <p className="text-xl mb-10 text-white/90 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl mb-8 md:mb-10 text-white/90 leading-relaxed px-4">
                 Ou idas e vindas a várias lojas. Nós cuidamos da parte técnica para você focar apenas em ver seu sonho
                 ganhar forma. Toque no botão abaixo para garantir sua obra completa com orçamento ágil pelo WhatsApp.
               </p>
@@ -335,11 +337,12 @@ export default function LandingPage() {
                 </div>
                 <div className="flex gap-3 mt-4">
                   <Button
-                    className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-md hover:shadow-lg transition-all duration-200"
+                    className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 shadow-md hover:shadow-lg transition-all duration-200 text-xs sm:text-sm w-full sm:w-auto"
                     onClick={() => window.open("https://www.instagram.com/caiuaconstrucoes/", "_blank")}
                   >
-                    <Instagram className="w-4 h-4 mr-2" />
-                    Seguir no Instagram
+                    <Instagram className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                    <span className="hidden sm:inline">Seguir no Instagram</span>
+                    <span className="sm:hidden">Instagram</span>
                   </Button>
                 </div>
               </div>
@@ -392,7 +395,7 @@ export default function LandingPage() {
                     <Clock className="w-4 h-4" />
                     Horário de Funcionamento
                   </p>
-                  <p className="text-sm text-primary-foreground/80">
+                  <p className="text-xs sm:text-sm text-primary-foreground/80">
                     Segunda a sexta - 08:00 às 18h | Sábado - 08:00 às 13:00
                   </p>
                 </div>
