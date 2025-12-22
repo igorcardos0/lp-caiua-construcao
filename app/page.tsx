@@ -31,11 +31,10 @@ export default function LandingPage() {
               alt="Caiuá Construções" 
               width={80} 
               height={80} 
-              className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-lg shadow-sm" 
+              className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full shadow-sm" 
             />
             <div className="hidden sm:block">
-              <h1 className="text-base md:text-lg font-bold text-primary">Caiuá Construções</h1>
-              <p className="text-xs text-muted-foreground">Cerâmica, Construção e Acabamentos</p>
+              <h1 className="text-lg md:text-xl lg:text-2xl font-bold text-primary">Caiuá Construções</h1>
             </div>
           </div>
           <div className="flex items-center gap-2 md:gap-4 mr-0 md:mr-6 lg:mr-24">
