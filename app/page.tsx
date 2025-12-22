@@ -67,10 +67,11 @@ export default function LandingPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 md:px-12 lg:px-16 xl:px-20 relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-block mb-6 px-4 py-2 bg-primary/90 text-primary-foreground rounded text-sm font-semibold uppercase tracking-wide animate-fade-in shadow-lg">
-              Empresa Familiar • Rurópolis
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-primary/90 text-primary-foreground rounded text-sm font-semibold uppercase tracking-wide animate-fade-in shadow-lg">
+              <MapPin className="w-4 h-4" />
+              Rurópolis, PA
             </div>
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white text-balance leading-[1.1] animate-fade-in-up" style={{ animationDelay: "0.2s", opacity: 0 }}>
               A sua casa pronta, <span className="text-primary drop-shadow-lg">do zero ao interior</span>
@@ -159,11 +160,11 @@ export default function LandingPage() {
                   refinamento do design de interiores.
                 </p>
                 <div className="flex items-start gap-3 mb-4">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1 animate-float" style={{ animationDelay: "0s" }} />
                   <p className="text-muted-foreground">Mais de anos servindo Rurópolis e região com excelência</p>
                 </div>
                 <div className="flex items-start gap-3 mb-4">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1 animate-float" style={{ animationDelay: "0.2s" }} />
                   <p className="text-muted-foreground">Centenas de obras entregues com qualidade e pontualidade</p>
                 </div>
                 <div className="flex items-start gap-3">
