@@ -201,6 +201,22 @@
   animation: blueprint-grid 20s linear infinite;
 }
 
+@keyframes brick-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200px 200px;
+  }
+}
+
+.brick-background {
+  background-image: url('/images/tijolin.png');
+  background-repeat: repeat;
+  background-size: auto;
+  animation: brick-move 30s linear infinite;
+}
+
 .animate-fade-in-up {
   animation: fade-in-up 0.8s ease-out forwards;
 }

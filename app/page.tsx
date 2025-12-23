@@ -24,23 +24,30 @@ export default function LandingPage() {
     element?.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
   return (
     <div className="min-h-screen">
-      <header className="border-b border-border bg-background/95 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-        <div className="container mx-auto px-4 py-3 md:py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2 md:gap-3 ml-0 md:ml-6 lg:ml-24">
+      <header className="bg-background/95 backdrop-blur-md sticky top-0 z-50">
+        <div className="container mx-auto px-4 md:px-12 lg:px-16 xl:px-20 py-3 md:py-4 flex items-center justify-between">
+          <button 
+            onClick={scrollToTop}
+            className="flex items-center gap-2 md:gap-3 cursor-pointer hover:opacity-80 transition-opacity"
+            aria-label="Voltar ao início"
+          >
             <Image 
-              src="/images/image.png" 
+              src="/images/Logo Caiuá - Vermelho.png" 
               alt="Caiuá Construções" 
-              width={80} 
-              height={80} 
-              className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full shadow-sm" 
+              width={400} 
+              height={160} 
+              quality={100}
+              priority
+              className="h-16 md:h-20 lg:h-22 w-auto" 
             />
-            <div className="hidden sm:block">
-              <h1 className="text-lg md:text-xl lg:text-2xl font-bold text-primary">Caiuá Construções</h1>
-            </div>
-          </div>
-          <div className="flex items-center gap-2 md:gap-4 mr-0 md:mr-6 lg:mr-24">
+          </button>
+          <div className="flex items-center gap-2 md:gap-4">
             <span className="hidden lg:block text-sm font-medium text-foreground">(93) 99125-0229</span>
             <Button
               onClick={scrollToContact}
@@ -59,7 +66,7 @@ export default function LandingPage() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 blueprint-pattern opacity-30"></div>
           <img
-            src="/construction-worker-with-hard-hat-at-building-site.jpg"
+            src="/images/background.jpg"
             alt="Construção profissional"
             className="w-full h-full object-cover"
             style={{
@@ -132,13 +139,14 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section id="about" className="py-20 bg-background relative">
-        <div className="container mx-auto px-4">
+      <section id="about" className="py-20 relative overflow-hidden brick-background">
+        <div className="absolute inset-0 z-0 bg-[#D40924] mix-blend-color opacity-90"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <ScrollAnimation direction="up">
               <div className="text-center mb-12">
-                <h3 className="text-3xl md:text-5xl font-bold mb-4">Sobre Nós</h3>
-                <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <h3 className="text-2xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">Sobre Nós</h3>
+                <div className="w-20 h-1 bg-white mx-auto mb-6"></div>
               </div>
             </ScrollAnimation>
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -154,26 +162,26 @@ export default function LandingPage() {
               </ScrollAnimation>
               <ScrollAnimation direction="left" delay={200}>
               <div>
-                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4 md:mb-6">
+                <p className="text-sm sm:text-base text-white leading-relaxed mb-4 md:mb-6 drop-shadow-md">
                   A Caiuá Construções representa o porto seguro de quem deseja edificar um patrimônio com inteligência e
                   solidez. Consolidada como uma empresa familiar que honra o investimento de cada cliente, transformamos
                   a simples venda de materiais em uma consultoria completa para sua obra.
                 </p>
-                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4 md:mb-6">
+                <p className="text-sm sm:text-base text-white leading-relaxed mb-4 md:mb-6 drop-shadow-md">
                   Nossa trajetória é marcada pela entrega de soluções que abrangem desde a infraestrutura bruta até o
                   refinamento do design de interiores.
                 </p>
                 <div className="flex items-start gap-3 mb-4">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1 animate-float" style={{ animationDelay: "0s" }} />
-                  <p className="text-muted-foreground">Mais de anos servindo Rurópolis e região com excelência</p>
+                  <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-1 animate-float drop-shadow-md" style={{ animationDelay: "0s" }} />
+                  <p className="text-sm text-white drop-shadow-md">Mais de anos servindo Rurópolis e região com excelência</p>
                 </div>
                 <div className="flex items-start gap-3 mb-4">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1 animate-float" style={{ animationDelay: "0.2s" }} />
-                  <p className="text-muted-foreground">Centenas de obras entregues com qualidade e pontualidade</p>
+                  <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-1 animate-float drop-shadow-md" style={{ animationDelay: "0.2s" }} />
+                  <p className="text-sm text-white drop-shadow-md">Centenas de obras entregues com qualidade e pontualidade</p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-1 animate-float" style={{ animationDelay: "0.4s" }} />
-                  <p className="text-muted-foreground">Parceiros das principais marcas do mercado</p>
+                  <CheckCircle2 className="w-5 h-5 text-white flex-shrink-0 mt-1 animate-float drop-shadow-md" style={{ animationDelay: "0.4s" }} />
+                  <p className="text-sm text-white drop-shadow-md">Parceiros das principais marcas do mercado</p>
                 </div>
               </div>
               </ScrollAnimation>
@@ -202,10 +210,9 @@ export default function LandingPage() {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-3 sm:mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
                       <Building2 className="w-6 h-6 sm:w-7 sm:h-7 text-primary group-hover:text-white transition-colors" />
                     </div>
-                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Do Bruto ao Acabamento Fino</h4>
+                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Do Alicerce ao Acabamento</h4>
                     <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                      Monte sua obra toda do zero conosco. Oferecemos desde cimento e ferragens até itens de alta margem e
-                      design, como iluminação, pisos, revestimentos e kits de banheiro.
+                      Monte sua obra do começo ao fim em um só lugar. Do cimento e ferragens aos acabamentos que fazem diferença: pisos, revestimentos, iluminação e kits de banheiro. Você compra certo e sua obra não para.
                     </p>
                   </CardContent>
                 </Card>
@@ -219,8 +226,7 @@ export default function LandingPage() {
                     </div>
                     <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Orçamento Ágil e Consultivo</h4>
                     <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                      Não apenas informamos preços; nosso time técnico sugere produtos complementares para evitar
-                      retrabalho e garantir que nada falte na sua obra.
+                      Orçamento rápido, sem enrolação. Além do preço, nossa equipe indica os complementos ideais para cada etapa, evitando retrabalho e falta de material. Mais segurança, menos dor de cabeça.
                     </p>
                   </CardContent>
                 </Card>
@@ -232,10 +238,9 @@ export default function LandingPage() {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-3 sm:mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
                       <Sparkles className="w-6 h-6 sm:w-7 sm:h-7 text-primary group-hover:text-white transition-colors" />
                     </div>
-                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Variedade que Rurópolis Merece</h4>
+                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Variedade que Sua Casa Merece</h4>
                     <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                      Trazemos modelos e produtos exclusivos que você não encontra em outros fornecedores locais,
-                      garantindo a estética e qualidade do seu sonho.
+                      Uma curadoria de produtos e modelos que elevam o resultado final da sua obra. Opções que você não encontra facilmente na região, com foco em beleza, durabilidade e custo-benefício.
                     </p>
                   </CardContent>
                 </Card>
@@ -247,10 +252,9 @@ export default function LandingPage() {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-3 sm:mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
                       <TruckIcon className="w-6 h-6 sm:w-7 sm:h-7 text-primary group-hover:text-white transition-colors" />
                     </div>
-                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Entrega Local Especializada</h4>
+                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Entrega Especializada</h4>
                     <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                      Logística focada em Rurópolis e cidades vizinhas (raio de até 90km), com o cuidado e a pontualidade
-                      que sua construção exige.
+                      Entrega em Rurópolis e cidades vizinhas (até 90 km), com agendamento e cuidado no transporte. Pontualidade e atenção para sua construção seguir no ritmo certo.
                     </p>
                   </CardContent>
                 </Card>
@@ -262,10 +266,9 @@ export default function LandingPage() {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-3 sm:mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
                       <Package className="w-6 h-6 sm:w-7 sm:h-7 text-primary group-hover:text-white transition-colors" />
                     </div>
-                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">A Segurança de Quem Constrói ao Seu Lado</h4>
+                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Construa com Segurança e Confiança</h4>
                     <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                      Investir em uma obra é realizar um sonho, e nós levamos isso a sério. Como uma empresa familiar
-                      consolidada, tratamos o seu projeto como se fosse nosso.
+                      Sua obra é um sonho, e a gente trata como tal. Somos uma empresa familiar da região, com atendimento próximo e transparente, para você comprar com confiança e construir tranquilo.
                     </p>
                   </CardContent>
                 </Card>
@@ -277,10 +280,9 @@ export default function LandingPage() {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 group-hover:bg-primary rounded-lg flex items-center justify-center mb-3 sm:mb-4 transition-all duration-300 mx-auto group-hover:scale-110">
                       <Lightbulb className="w-6 h-6 sm:w-7 sm:h-7 text-primary group-hover:text-white transition-colors" />
                     </div>
-                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Consultoria Técnica de Autoridade</h4>
+                    <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Consultoria Técnica de Verdade</h4>
                     <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                      Mais do que vender materiais, oferecemos uma consultoria técnica de autoridade para garantir que seu
-                      investimento seja inteligente e sem desperdícios.
+                      Mais do que vender material, ajudamos você a escolher o certo para cada etapa da obra. Resultado: menos desperdício, mais rendimento e um acabamento que dá orgulho.
                     </p>
                   </CardContent>
                 </Card>
